@@ -29,7 +29,12 @@ public class UltimateQATest extends PageSetup {
 
         WebElement button = driver.findElementByName("et_builder_submit_button");
         button.click();
-       
     }
+        @Test
+        public void testThree() {
+//            WebElement blueField = driver.findElementByClassName("et_pb_module et_pb_cta_0 et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark");
+            WebElement blueField = driver.findElementByXPath("//*[contains(@class, 'et_pb_cta_0 et_pb_promo')]");
+            Assertions.assertEquals("rgba(46, 163, 242, 1)", blueField.getCssValue("background-color"));
+        }
 
 }
