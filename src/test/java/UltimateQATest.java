@@ -18,4 +18,18 @@ public class UltimateQATest extends PageSetup {
         Assertions.assertEquals("Button success", textSuccess);
     }
 
+
+    @Test
+    public void testTwo() {
+        WebElement nameInput = driver.findElementById("et_pb_contact_name_0");
+        nameInput.sendKeys("Tester");
+
+        WebElement emailInput = driver.findElementById("et_pb_contact_email_0");
+        emailInput.sendKeys("tester@test.pl");
+
+        WebElement button = driver.findElementByName("et_builder_submit_button");
+        button.click();
+       
+    }
+
 }
